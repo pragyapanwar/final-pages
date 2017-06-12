@@ -12,8 +12,20 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
-<body id="top">
+</head>
+<body id="top" style ="background-color: #000000">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -21,30 +33,43 @@ Licence URI: http://www.os-templates.com/template-terms
 <div class="bgded" style="background-image:url('images/demo/backgrounds/01.jpg');"> 
   <!-- ################################################################################################ -->
   <div class="wrapper row1">
-    <header id="header" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-      <div id="logo" class="fl_left">
-        <h1><a href="index.html">UNISTASH</a></h1>
-      </div>
-      <nav id="mainav" class="fl_right">
-        <ul class="clear">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a class="drop" href="#">NOtes</a>
-            <ul>
-              <li><a href="pages/full-width.html">Lecture Notes</a></li>
-               <li><a href="pages/gallery.html">Practical Files</a></li>
-              
-            </ul>
-          </li>
-         
-      
+    <nav class="navbar navbar-default" id="mainnav" >
+      <div class="container" style>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Unistash</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+           <!-- <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>-->
+            <li>
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1">Courses</a>
+            </li>
+          </ul>
+          <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse1">
+            <li><a href="#">B. Tech</a></li>
+            <li><a href="#">M. Tech</a></li>
+            <li><a href="#">M.C.A.</a></li>
+            <li><a href="#">Ph. D</a></li>
+            <li><a href="#">B. Arch</a></li>
           
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-      <!-- ################################################################################################ -->
-    </header>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
   </div>
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
@@ -101,7 +126,7 @@ Licence URI: http://www.os-templates.com/template-terms
     </style>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
+   
     <div id="map"></div>
     <script>
       function initMap() {
@@ -125,7 +150,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <p class="nospace btmspace-30"></p>
       <form  name ="myform"method="post" action="/action_page_post.php" onsubmit="return validateForm();" method="post">
         <fieldset>
-          <legend>Newsletter:</legend>
+          <legend style="    color: #fff;">Newsletter:</legend>
           <input class="btmspace-15" type="text" value="" placeholder="Name">
            <input class="btmspace-15" type="text" value="" placeholder="College">
           <input class="btmspace-15" type="Email" value="" placeholder="Email">

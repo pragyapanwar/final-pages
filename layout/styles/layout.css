@@ -4,6 +4,75 @@
 @import url("font-awesome.min.css");
 @import url("framework.css");
 
+/*new nav-----------------------------------------------------------------------------------------------------*/
+#mainnav{
+height:auto;
+opacity:0.8;
+padding-top:30px;
+font-size:130%;
+}
+
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    /* padding: 15px 15px; */
+    font-size: 20px;
+    line-height: 20px;
+    padding:0px;
+}
+.navbar-brand { position: relative; z-index: 2; }
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
+.navbar .navbar-collapse { position: relative; overflow: hidden !important; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+.btn.btn-circle { border-radius: 40px; }
+.btn.btn-outline { background-color: transparent; }
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background-color: rgb(111, 84, 153);
+    border-color: rgb(111, 84, 153);
+    color: rgb(255, 255, 255);
+}
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px,-50px);
+}
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px,0px);
+}
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+    
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%,0px);
+    }
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px,0px);
+    }
+    
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px,-100%);
+    }
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px,0px);
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row1{z-index:1;}/* Required for the drop shadow - do not delete, unless the drop shadow isn't wanted */
@@ -23,15 +92,15 @@
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:200px 0;}
+#pageintro{padding:150px 0;}
 
 #pageintro > div{display:block; max-width:60%;}
 #pageintro > div *{line-height:normal;text-align: justify;}
 #pageintro .heading{
 	color:#000000;
-	margin:0 0 30px 0; padding:0; font-size:7rem;}
-#pageintro p{margin:0; font-size: 1.3rem;
-    line-height: 2rem;
+	margin:0 0 30px 0; padding:0; font-size:9rem;}
+#pageintro p{margin:0; font-size: 1.75rem;
+    line-height: 2.75rem;
     background-color: snow;
     opacity: 0.8;
     padding: 15px;
@@ -41,7 +110,7 @@
 --------------------------------------------------------------------------------------------------------------- */
 #footer{padding:80px 0;}
 
-#footer .heading{margin-bottom:50px; font-size:1.2rem;}
+#footer .heading{margin-bottom:50px; font-size:2rem;}
 
 #footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
 #footer .linklist li:last-child{margin:0; padding:0; border:none;}
@@ -64,39 +133,10 @@
 #copyright{padding:20px 0;}
 #copyright *{margin:0; padding:0;}
 
-*, *::before, *::after{transition:all .28s ease-in-out;}
-#mainav form *{transition:none !important;}
 
 /* Navigation
 --------------------------------------------------------------------------------------------------------------- */
-nav ul, nav ol{margin:0; padding:0; list-style:none;}
-
-#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
-
-/* Top Navigation */
-#mainav{}
-#mainav ul.clear{margin-top:3px;}
-#mainav ul{text-transform:uppercase;}
-#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
-#mainav ul ul ul{left:180px; top:0;}
-#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
-#mainav li:last-child{margin-right:0;}
-#mainav li li{width:100%; margin:0;}
-#mainav li a{display:block; padding:30px 0;}
-#mainav li li a{border:solid; border-width:0 0 1px 0;}
-#mainav .drop{padding-left:15px;}
-#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
-#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
-#mainav .drop::after{top:35px; left:5px;}
-#mainav li li .drop::after{top:15px; left:5px;}
-#mainav ul ul{visibility:hidden; opacity:0;}
-#mainav ul li:hover > ul{visibility:visible; opacity:1;}
-
-#mainav form{display:none; margin:0; padding:0;}
-#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
-#mainav form select{width:100%; padding:5px; border:1px solid;}
-#mainav form select option{margin:5px; padding:0; border:none;}
+in:5px; padding:0; border:none;}
 
 
 
@@ -152,7 +192,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#CF4845;}
 .row1{box-shadow:0 5px 10px rgba(0,0,0,.1);}
 .row2{}
 .row3{color:#191919; background-color:#FFFFFF;}
-.row4{color:#CBCBCB;}
+.row4{color:#DDD;}
 .row5, .row5 a{color:#CBCBCB; background-color:#191919;}
 
 
